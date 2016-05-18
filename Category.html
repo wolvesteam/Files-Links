@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Signin Template</title>
+		<!-- Bootstrap core CSS -->
+		<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	
+	<style>
+		.categoryFont{
+			color: white;
+			font-size: 25px;
+		}
+		body {
+			background-image: url("http://www.acap.edu.au/assets/Uploads/_resampled/SetWidth680-Melbourne-665x380-1.jpg");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			/* opacity: 0.4; */
+			background-color: rgba(0,0,0,.4);
+			
+		}
+		.headerstyle{
+			/* background-color: cornflowerblue; */
+		}
+		
+	</style>
+	
+	<script>
+		function downloadQues(){
+			document.getElementById('cat1DivId').style.display = 'block';
+			document.getElementById('cat2DivId').style.display = 'block';
+			document.getElementById('cat3DivId').style.display = 'block';
+			document.getElementById('cat4DivId').style.display = 'block';
+			document.getElementById('cat5DivId').style.display = 'block';
+			document.getElementById('cat6DivId').style.display = 'block';
+			var pId = document.getElementById('pdfId');
+			var pLId = document.getElementById('pdfLinkId');
+			var a = pId.appendChild(
+				document.createElement("a")
+			);
+			a.download = "export.html";
+			a.href = "data:text/html," + document.getElementById("quesPanelDiv").innerHTML;
+			if(a.innerHTML == ''){
+				a.innerHTML = "<br/><br/> [Export conent]";
+			}
+			document.getElementById('cat1DivId').style.display = 'none';
+			document.getElementById('cat2DivId').style.display = 'none';
+			document.getElementById('cat3DivId').style.display = 'none';
+			document.getElementById('cat4DivId').style.display = 'none';
+			document.getElementById('cat5DivId').style.display = 'none';
+			document.getElementById('cat6DivId').style.display = 'none';
+			pLId.setAttribute("onclick", null);
+		}
+	</script>
+
+	<body>
+	<br/><br/>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="https://pbs.twimg.com/profile_images/1226171062/2010_no_border_big.jpg" style="width: 180px;height: 100px;"/>
+			</div>
+			<div class="col-md-6">
+				
+			</div>
+			<div class="col-md-3">
+				
+			</div>
+		</div>
+		<br/><br/><br/>
+		<div class="row headerstyle">
+			<div class="col-md-3">
+				
+			</div>
+			<div class="col-md-6">
+				<center> 
+					<b><h2 class="categoryFont1"> Category Types </h2></b>
+					<br/><br/>
+					<h3>
+						<form class="form-inline">
+							<a class="categoryFont" href="#" id="cat1" onclick="location.href = 'Category1.html';">Category 1</a><br/><br/>
+							<a class="categoryFont" href="#" id="cat2" onclick="location.href = 'Category2.html';">Category 2</a><br/><br/>
+							<a class="categoryFont" href="#" id="cat3" onclick="location.href = 'Category3.html';">Category 3</a><br/><br/>
+							<a class="categoryFont" href="#" id="cat4" onclick="location.href = 'Category4.html';">Category 4</a><br/><br/>
+							<a class="categoryFont" href="#" id="cat5" onclick="location.href = 'Category5.html';">Category 5</a><br/><br/>
+							<a class="categoryFont" href="#" id="cat6" onclick="location.href = 'Category6.html';">Category 6</a><br/><br/>
+						</form>
+					</h3>
+				</center>
+			</div>
+			<div class="col-md-3">
+				<h4> <p id="pdfId" align="right"><a class="categoryFont" id="pdfLinkId" href="#" onclick="downloadQues();">PDF/ HTML view</a></p> </h4> <br/><br/>
+				<p align="right">
+					<button type="button" class="btn btn-default btn-lg">Save</button> <br/><br/>
+					<button type="button" class="btn btn-default btn-lg">Finish & Submit</button>
+				</p>
+			</div>
+		</div>
+		
+		<br/><br/><br/>
+		<div class="row">
+			<br/><br/><br/>
+			<div class="col-md-3">
+				
+			</div>
+			<div class="col-md-6">
+				<!-- <center> 
+					<button type="button" class="btn btn-default btn-lg">Save</button> &nbsp; &nbsp;
+					<button type="button" class="btn btn-default btn-lg">Finish & Submit</button>
+				</center> -->
+				<br/><br/><br/>
+			</div>
+			<div class="col-md-3">
+				
+			</div>
+		</div>
+		
+		<div id="quesPanelDiv">
+			<div class="quesPanel" id="cat1DivId" style="display:none;">
+				<div class="row">
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-6">
+						<form>
+							<br/>
+							<b> Which city is Capital of England ? </b> <br/>
+							<input type="radio" name="gender" value="male"> Sheffield <br>
+							<input type="radio" name="gender" value="female"> London<br>
+							<input type="radio" name="gender" value="other"> Manchester </br/>
+							<input type="radio" name="gender" value="other"> Edinburgh </br/><br/>
+							
+							<b> If 5x plus 32 equals 4 minus 2x what is the value of x ? </b> <br/>
+							<input type="radio" name="gender" value="male"> -4 <br>
+							<input type="radio" name="gender" value="female"> 10 <br>
+							<input type="radio" name="gender" value="other"> 4 </br/>
+							<input type="radio" name="gender" value="other"> -10 </br/><br/>
+							
+						</form>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+			</div>
+			<div class="quesPanel" id="cat2DivId" style="display:none;">
+				<div class="row">
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-6">
+						<form>
+							<br/>
+							<b> Do you like pizza? </b> <br/>
+							<input type="radio" name="gender" value="male"> Yes I do. <br>
+							<input type="radio" name="gender" value="other"> No I don't. </br/><br/>
+							
+							<b> Was it raining? </b> <br/>
+							<input type="radio" name="gender" value="male"> Yes <br>
+							<input type="radio" name="gender" value="other"> No </br/><br/>
+
+						</form>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+			</div>
+			<div class="quesPanel" id="cat3DivId" style="display:none;">
+				<div class="row">
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-6">
+						<form>
+							<br/>
+							<b> The customer service representative was knowledge </b> <br/>
+							<input type="radio" name="gender" value="male"> Strongly Agree <br>
+							<input type="radio" name="gender" value="female"> Agree<br>
+							<input type="radio" name="gender" value="other"> Disgree </br/>
+							<input type="radio" name="gender" value="other"> Strongly Disgree </br/>
+							<input type="radio" name="gender" value="other"> Neither Agree nor Disagree </br/><br/>
+							
+							<b> Please indicate your level of satisfaction with our Products </b> <br/>
+							<input type="radio" name="gender" value="male"> Strongly Agree <br>
+							<input type="radio" name="gender" value="female"> Agree<br>
+							<input type="radio" name="gender" value="other"> Disgree </br/>
+							<input type="radio" name="gender" value="other"> Strongly Disgree </br/>
+							<input type="radio" name="gender" value="other"> Neither Agree nor Disagree </br/><br/>
+							
+						</form>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+			</div>
+			<div class="quesPanel" id="cat4DivId" style="display:none;">
+				<div class="row">
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-6">
+						<form>
+							<br/>
+							<b> What types of decorations do you plan to have for your friend's birthday party?  </b> <br/>
+							<input type="text" class="form-control"><br><br/>
+							
+							<b> Give me an example of a time when you got really motivated at work.  </b> <br/>
+							<input type="text" class="form-control"><br><br/>
+							
+						</form>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+			</div>
+			<div class="quesPanel" id="cat5DivId" style="display:none;">
+				<div class="row">
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-6">
+						<form>
+							<br> What are beaches generally composed of  ? </b> <br/>
+							<input type="checkbox" name="bedrock" value="bedrock">Bedrock<br>
+							<input type="checkbox" name="pebbles" value="pebbles">Pebbles </br/>
+							<input type="checkbox" name="clay" value="clay">Clay <br/>
+							<input type="checkbox" name="sand" value="sand">Sand <br/>
+							<input type="checkbox" name="boulders" value="boulders">Boulders <br/><br/>
+							
+							<b> Which of the following are Fruits > </b> <br/>
+							<input type="checkbox" name="Mango" value="Mango">Mango<br>
+							<input type="checkbox" name="Tomato" value="Tomato">Tomato </br/>
+							<input type="checkbox" name="Orange" value="Orange">Orange <br/>
+							<input type="checkbox" name="Banana" value="Banana">Banana <br/>
+							<input type="checkbox" name="Potato" value="Potato">Potato <br/><br/>
+							
+						</form>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+			</div>
+			<div class="quesPanel" id="cat6DivId" style="display:none;">
+				<div class="row">
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-6">
+						<form>
+							<br/>
+							<b> Provide your Feedback  </b> <br/>
+							<textarea rows="30" cols="75"> </textarea>
+							
+						</form>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </div> <!-- /container -->
+
+	</body>
+</html>

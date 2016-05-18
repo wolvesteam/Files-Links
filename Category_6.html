@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Signin Template</title>
+		<!-- Bootstrap core CSS -->
+		<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Bootstrap core CSS -->
+		<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		
+	</head>
+	
+	<style>
+		.categoryFont{
+			color: #949403;;
+		}
+		.progress-bar{
+			background-color: limegreen !important;
+		}
+	</style>
+	
+	<script>
+		function downloadQues(){
+			document.getElementById('cat1DivId').style.display = 'block';
+			document.getElementById('cat2DivId').style.display = 'block';
+			document.getElementById('cat3DivId').style.display = 'block';
+			document.getElementById('cat4DivId').style.display = 'block';
+			document.getElementById('cat5DivId').style.display = 'block';
+			document.getElementById('cat6DivId').style.display = 'block';
+			var pId = document.getElementById('pdfId');
+			var pLId = document.getElementById('pdfLinkId');
+			var a = pId.appendChild(
+				document.createElement("a")
+			);
+			a.download = "export.html";
+			a.href = "data:text/html," + document.getElementById("quesPanelDiv").innerHTML;
+			if(a.innerHTML == ''){
+				a.innerHTML = "<br/><br/> [Export conent]";
+			}
+			document.getElementById('cat1DivId').style.display = 'none';
+			document.getElementById('cat2DivId').style.display = 'none';
+			document.getElementById('cat3DivId').style.display = 'none';
+			document.getElementById('cat4DivId').style.display = 'none';
+			document.getElementById('cat5DivId').style.display = 'none';
+			document.getElementById('cat6DivId').style.display = 'none';
+			pLId.setAttribute("onclick", null);
+		}
+	</script>
+	
+	<body class="bckgrndclr">
+		<br/>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="wrapper">
+					<!--=== Header ===-->
+					<div class="header">
+						<div class="container">
+							<div class="col-md-4">
+								<!-- Logo -->
+								<a class="logo" href="http://rewardanalytics.com.au/">
+									<img src="http://rewardanalytics.com.au/ra-logo.png" alt="Reward Analytics"style="margin-top: 4px;width: 125px;">
+								</a>
+								<!-- End Logo -->
+							</div> 
+							<div class="col-md-8">    
+								<ul class="nav navbar-nav">
+									<li class="dropdown">
+									  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://rewardanalytics.com.au/">Home</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+									  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://rewardanalytics.com.au/">About Us</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+									  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://rewardanalytics.com.au/">Contact Us</a></li>
+										</ul>
+									</li>
+								</ul>
+								<form class="navbar-form navbar-left" role="search">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Search">
+									</div>
+									<button type="submit" class="btn btn-default">Go</button>
+								</form>
+								<!-- End Topbar -->
+								<!-- Toggle get grouped for better mobile display -->
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="fa fa-bars"></span>
+								</button>
+								<!-- End Toggle -->
+							</div>
+						</div><!--/end container-->
+					</div>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<br/>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+						  <span class="sr-only">100% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br/>
+			
+			<div class="row">
+				<div class="col-md-3">
+					<center> 
+						<b><h2 class="categoryFont1"> Category Types </h2></b>
+						<br/>
+						<h3>
+							<form class="form-inline">
+								<a style="color:blue;" class="categoryFont" href="#" id="cat1" onclick="location.href = 'Category_1.html';">Category 1</a><br/><br/>
+								<a style="color:orange;" class="categoryFont" href="#" id="cat2" onclick="location.href = 'Category_2.html';">Category 2</a><br/><br/>
+								<a style="color:green;" class="categoryFont" href="#" id="cat3" onclick="location.href = 'Category_3.html';">Category 3</a><br/><br/>
+								<a style="color:#980757;" class="categoryFont" href="#" id="cat4" onclick="location.href = 'Category_4.html';">Category 4</a><br/><br/>
+								<a style="color:red;" class="categoryFont" href="#" id="cat5" onclick="location.href = 'Category_5.html';">Category 5</a><br/><br/>
+								<a style="color:#949403;" class="categoryFont" href="#" id="cat6" onclick="location.href = 'Category_6.html';">Category 6</a><br/><br/>
+							</form>
+						</h3>
+					</center>
+				</div>
+				<div class="col-md-8">
+					<div class="row">
+						<br/><br/><br/>
+						<div class="col-md-2"></div>
+						<div class="col-md-10">
+							<form class="categoryFont">
+								<div style="font-color:20px;">
+									<b > Provide your Feedback  </b> <br/>
+									<textarea rows="15" cols="50"> </textarea>
+								</div>	
+								</br/><br/>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1">
+					<!-- <p align="right">
+						<br/><br/>
+						<button type="button" class="btn btn-default btn-lg">Save</button> <br/><br/>
+						<button type="button" class="btn btn-default btn-lg">Finish & Submit</button>
+					</p> -->
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-6">
+					<center> 
+						<input type="image" src="http://0.s3.envato.com/files/139250641/Print%20(printer%20icon)%20green%20square%20button.jpg" alt="Submit" width="48" height="48" onclick="downloadQues();" />&nbsp;&nbsp;&nbsp;
+						<input type="image" src="http://www.inast.org/PDF-logo-300x300.png" alt="Submit" width="48" height="48" onclick="downloadQues();" />&nbsp;&nbsp;&nbsp;
+						<input type="image" src="http://image.shutterstock.com/z/stock-photo-newsletter-email-icon-green-glossy-round-button-367934180.jpg" alt="Submit" width="48" height="48" />&nbsp;&nbsp;&nbsp;
+					</center>
+					<p id="pdfId" align="right"><a class="categoryFont" id="pdfLinkId" href="#" ></a>
+					</p>
+				</div>
+				<div class="col-md-3">
+				</div>
+			</div>
+			<div class="row">
+				<br/>
+				<div class="col-md-3">
+					<center> 
+						<input type="image" src="http://previews.123rf.com/images/faysalfarhan/faysalfarhan1502/faysalfarhan150200481/36264135-Back-glassy-green-button-Stock-Photo.jpg" alt="Submit" width="48" height="48" onclick="location.href = 'Category_5.html';">
+					</center> 
+				</div>
+				<div class="col-md-6">
+					<center> 
+						<div class="btn-group">
+							<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</div>
+						<!-- <div class="btn-group">
+							<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save & Continue </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</div> -->
+						<div class="btn-group">
+							<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save & Finish </button>
+						</div>
+					</center>
+					<br/>
+				</div>
+				<div class="col-md-3">
+					<center> 
+						<!-- <input type="image" src="http://previews.123rf.com/images/faysalfarhan/faysalfarhan1502/faysalfarhan150200608/36265105-Next-glassy-green-button-Stock-Photo.jpg" alt="Submit" width="48" height="48"> -->
+					</center>
+				</div>
+			</div>
+			
+			<div id="quesPanelDiv">
+				<div class="quesPanel" id="cat1DivId" style="display:none;">
+					<div class="row">
+						<div class="col-md-3">
+						</div>
+						<div class="col-md-6">
+							<form>
+								<br/>
+								<b> Which city is Capital of England ? </b> <br/>
+								<input type="radio" name="gender" value="male"> Sheffield <br>
+								<input type="radio" name="gender" value="female"> London<br>
+								<input type="radio" name="gender" value="other"> Manchester </br/>
+								<input type="radio" name="gender" value="other"> Edinburgh </br/><br/>
+								
+								<b> If 5x plus 32 equals 4 minus 2x what is the value of x ? </b> <br/>
+								<input type="radio" name="gender" value="male"> -4 <br>
+								<input type="radio" name="gender" value="female"> 10 <br>
+								<input type="radio" name="gender" value="other"> 4 </br/>
+								<input type="radio" name="gender" value="other"> -10 </br/><br/>
+								
+							</form>
+						</div>
+						<div class="col-md-3">
+						</div>
+					</div>
+				</div>
+				<div class="quesPanel" id="cat2DivId" style="display:none;">
+					<div class="row">
+						<div class="col-md-3">
+						</div>
+						<div class="col-md-6">
+							<form>
+								<br/>
+								<b> Do you like pizza? </b> <br/>
+								<input type="radio" name="gender" value="male"> Yes I do. <br>
+								<input type="radio" name="gender" value="other"> No I don't. </br/><br/>
+								
+								<b> Was it raining? </b> <br/>
+								<input type="radio" name="gender" value="male"> Yes <br>
+								<input type="radio" name="gender" value="other"> No </br/><br/>
+
+							</form>
+						</div>
+						<div class="col-md-3">
+						</div>
+					</div>
+				</div>
+				<div class="quesPanel" id="cat3DivId" style="display:none;">
+					<div class="row">
+						<div class="col-md-3">
+						</div>
+						<div class="col-md-6">
+							<form>
+								<br/>
+								<b> The customer service representative was knowledge </b> <br/>
+								<input type="radio" name="gender" value="male"> Strongly Agree <br>
+								<input type="radio" name="gender" value="female"> Agree<br>
+								<input type="radio" name="gender" value="other"> Disgree </br/>
+								<input type="radio" name="gender" value="other"> Strongly Disgree </br/>
+								<input type="radio" name="gender" value="other"> Neither Agree nor Disagree </br/><br/>
+								
+								<b> Please indicate your level of satisfaction with our Products </b> <br/>
+								<input type="radio" name="gender" value="male"> Strongly Agree <br>
+								<input type="radio" name="gender" value="female"> Agree<br>
+								<input type="radio" name="gender" value="other"> Disgree </br/>
+								<input type="radio" name="gender" value="other"> Strongly Disgree </br/>
+								<input type="radio" name="gender" value="other"> Neither Agree nor Disagree </br/><br/>
+								
+							</form>
+						</div>
+						<div class="col-md-3">
+						</div>
+					</div>
+				</div>
+				<div class="quesPanel" id="cat4DivId" style="display:none;">
+					<div class="row">
+						<div class="col-md-3">
+						</div>
+						<div class="col-md-6">
+							<form>
+								<br/>
+								<b> What types of decorations do you plan to have for your friend's birthday party?  </b> <br/>
+								<input type="text" class="form-control"><br><br/>
+								
+								<b> Give me an example of a time when you got really motivated at work.  </b> <br/>
+								<input type="text" class="form-control"><br><br/>
+								
+							</form>
+						</div>
+						<div class="col-md-3">
+						</div>
+					</div>
+				</div>
+				<div class="quesPanel" id="cat5DivId" style="display:none;">
+					<div class="row">
+						<div class="col-md-3">
+						</div>
+						<div class="col-md-6">
+							<form>
+								<br> What are beaches generally composed of  ? </b> <br/>
+								<input type="checkbox" name="bedrock" value="bedrock">Bedrock<br>
+								<input type="checkbox" name="pebbles" value="pebbles">Pebbles </br/>
+								<input type="checkbox" name="clay" value="clay">Clay <br/>
+								<input type="checkbox" name="sand" value="sand">Sand <br/>
+								<input type="checkbox" name="boulders" value="boulders">Boulders <br/><br/>
+								
+								<b> Which of the following are Fruits > </b> <br/>
+								<input type="checkbox" name="Mango" value="Mango">Mango<br>
+								<input type="checkbox" name="Tomato" value="Tomato">Tomato </br/>
+								<input type="checkbox" name="Orange" value="Orange">Orange <br/>
+								<input type="checkbox" name="Banana" value="Banana">Banana <br/>
+								<input type="checkbox" name="Potato" value="Potato">Potato <br/><br/>
+								
+							</form>
+						</div>
+						<div class="col-md-3">
+						</div>
+					</div>
+				</div>
+				<div class="quesPanel" id="cat6DivId" style="display:none;">
+					<div class="row">
+						<div class="col-md-3">
+						</div>
+						<div class="col-md-6">
+							<form>
+								<br/>
+								<b> Provide your Feedback  </b> <br/>
+								<textarea rows="30" cols="75"> </textarea>
+								
+							</form>
+						</div>
+						<div class="col-md-3">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div> <!-- /container -->
+
+	</body>
+</html>
